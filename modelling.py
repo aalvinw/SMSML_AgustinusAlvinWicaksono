@@ -17,20 +17,21 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-# 4. Mulai tracking MLflow
+# 4. Model
+model = LogisticRegression(max_iter=500)
+model.fit(X_train, y_train)
+
+# 5. Evaluasi
+y_pred = model.predict(X_test)
+acc = accuracy_score(y_test, y_pred)
+print("Akurasi:", acc)
+print(classification_report(y_test, y_pred))
+
+# 6. Logging manual
 mlflow.set_experiment("Basic_Model_Logistics")
+mlflow.log_param("model_type", "LogisticRegression")
+mlflow.log_param("max_iter", 500)
+mlflow.log_metric("accuracy", acc)
 
-with mlflow.start_run():
-    mlflow.autolog()
-
-    # 5. Model sederhana
-    model = LogisticRegression(max_iter=500)
-    model.fit(X_train, y_train)
-
-    # 6. Evaluasi
-    y_pred = model.predict(X_test)
-    acc = accuracy_score(y_test, y_pred)
-    print("Akurasi:", acc)
-    print(classification_report(y_test, y_pred))
-
-    # 7. Logging selesai otomatis karena autolog
+# 7. Simpan model
+mlflow.sklearn.log_model(model, "model")
