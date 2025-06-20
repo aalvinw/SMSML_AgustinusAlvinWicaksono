@@ -6,7 +6,7 @@ import mlflow
 import mlflow.sklearn
 
 # 1. Load data preprocessed
-df = pd.read_csv("SMSML_AgustinusAlvinWicaksono\Eksperimen_SML_AgustinusAlvinWicaksono\preprocessed_data.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/aalvinw/SMSML_AgustinusAlvinWicaksono/refs/heads/main/Membangun_model/preprocessed_data.csv")
 
 # 2. Pisahkan fitur dan target
 X = df.drop(columns=["Reached.on.Time_Y.N"])
