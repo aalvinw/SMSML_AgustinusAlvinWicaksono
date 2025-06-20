@@ -1,28 +1,33 @@
-name: Train Model CI
+name: MLflow CI
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
+  pull_request:
 
 jobs:
-  train:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Set up Python 3.12
-        uses: actions/setup-python@v4
+      - name: Set up Conda
+        uses: conda-incubator/setup-miniconda@v2
         with:
+          auto-update-conda: true
+          environment-file: Workflow-CI/MLProject/conda.yaml
+          activate-environment: prediksi_env
           python-version: 3.12
 
-      - name: Install dependencies
+      - name: Install MLflow & Dependencies
+        shell: bash -l {0}
         run: |
-          pip install --upgrade pip
-          pip install pandas scikit-learn mlflow==2.19.0 dagshub
+          conda install pip -y
+          pip install mlflow==2.8.1 dagshub pandas scikit-learn
 
       - name: Run MLflow Project
-        run: mlflow run . --env-manager=local
+        shell: bash -l {0}
+        run: |
+          mlflow run Workflow-CI/MLProject
