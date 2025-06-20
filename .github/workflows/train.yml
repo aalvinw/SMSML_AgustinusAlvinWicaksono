@@ -25,4 +25,4 @@ jobs:
           pip install pandas scikit-learn mlflow==2.19.0 dagshub
 
       - name: Run MLflow Project
-        run: mlflow run . --no-conda
+        run: mlflow run . --env-manager=local
