@@ -25,7 +25,7 @@ jobs:
         shell: bash -l {0}
         run: |
           conda install pip -y
-          pip install mlflow==2.8.1 dagshub pandas scikit-learn
+          pip install mlflow==2.19.0 
 
       - name: Run MLflow Project
         shell: bash -l {0}
