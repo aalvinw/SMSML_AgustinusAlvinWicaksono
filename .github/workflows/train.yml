@@ -18,7 +18,7 @@ jobs:
         with:
           auto-update-conda: true
           environment-file: Workflow-CI/MLProject/conda.yaml
-          activate-environment: prediksi_env
+          activate-environment: smsml_env
           python-version: 3.12
 
       - name: Install MLflow & Dependencies
