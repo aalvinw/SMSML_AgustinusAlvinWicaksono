@@ -1,13 +1,11 @@
-name: smsml-env
+name: prediksi_env
 channels:
   - defaults
-  - conda-forge
-
 dependencies:
-  - python=3.12.7
+  - python=3.12
+  - pandas
+  - numpy
+  - scikit-learn
   - pip
   - pip:
-      - pandas
-      - scikit-learn
       - mlflow==2.19.0
-      - dagshub
