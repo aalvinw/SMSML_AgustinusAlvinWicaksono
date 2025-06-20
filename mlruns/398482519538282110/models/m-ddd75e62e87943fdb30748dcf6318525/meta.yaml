@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/ASUS/Downloads/SMSML_AgustinusAlvinWicaksono/mlruns/398482519538282110/models/m-ddd75e62e87943fdb30748dcf6318525/artifacts
+creation_timestamp: 1750371383311
+experiment_id: '398482519538282110'
+last_updated_timestamp: 1750371409496
+model_id: m-ddd75e62e87943fdb30748dcf6318525
+model_type: null
+name: model
+source_run_id: c2a5e29263314f7484aa3a5368c7948d
+status: 2
+status_message: null

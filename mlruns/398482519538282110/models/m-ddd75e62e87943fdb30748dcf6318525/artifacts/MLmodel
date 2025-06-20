@@ -1,0 +1,43 @@
+artifact_path: file:///C:/Users/ASUS/Downloads/SMSML_AgustinusAlvinWicaksono/mlruns/398482519538282110/models/m-ddd75e62e87943fdb30748dcf6318525/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.0
+is_signature_from_type_hint: false
+mlflow_version: 3.1.0
+model_id: m-ddd75e62e87943fdb30748dcf6318525
+model_size_bytes: 1344
+model_uuid: m-ddd75e62e87943fdb30748dcf6318525
+prompts: null
+run_id: c2a5e29263314f7484aa3a5368c7948d
+signature:
+  inputs: '[{"type": "long", "name": "Customer_care_calls", "required": true}, {"type":
+    "long", "name": "Customer_rating", "required": true}, {"type": "long", "name":
+    "Cost_of_the_Product", "required": true}, {"type": "long", "name": "Prior_purchases",
+    "required": true}, {"type": "long", "name": "Discount_offered", "required": true},
+    {"type": "long", "name": "Weight_in_gms", "required": true}, {"type": "boolean",
+    "name": "Warehouse_block_A", "required": true}, {"type": "boolean", "name": "Warehouse_block_B",
+    "required": true}, {"type": "boolean", "name": "Warehouse_block_C", "required":
+    true}, {"type": "boolean", "name": "Warehouse_block_D", "required": true}, {"type":
+    "boolean", "name": "Warehouse_block_F", "required": true}, {"type": "boolean",
+    "name": "Mode_of_Shipment_Flight", "required": true}, {"type": "boolean", "name":
+    "Mode_of_Shipment_Road", "required": true}, {"type": "boolean", "name": "Mode_of_Shipment_Ship",
+    "required": true}, {"type": "boolean", "name": "Product_importance_high", "required":
+    true}, {"type": "boolean", "name": "Product_importance_low", "required": true},
+    {"type": "boolean", "name": "Product_importance_medium", "required": true}, {"type":
+    "boolean", "name": "Gender_F", "required": true}, {"type": "boolean", "name":
+    "Gender_M", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-06-19 22:16:23.531470'

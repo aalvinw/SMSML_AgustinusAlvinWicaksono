@@ -1,0 +1,22 @@
+digest: 4ae09a1e
+name: dataset
+profile: '{"num_rows": 2200, "num_elements": 41800}'
+schema: '{"mlflow_colspec": [{"type": "long", "name": "Customer_care_calls", "required":
+  true}, {"type": "long", "name": "Customer_rating", "required": true}, {"type": "long",
+  "name": "Cost_of_the_Product", "required": true}, {"type": "long", "name": "Prior_purchases",
+  "required": true}, {"type": "long", "name": "Discount_offered", "required": true},
+  {"type": "long", "name": "Weight_in_gms", "required": true}, {"type": "boolean",
+  "name": "Warehouse_block_A", "required": true}, {"type": "boolean", "name": "Warehouse_block_B",
+  "required": true}, {"type": "boolean", "name": "Warehouse_block_C", "required":
+  true}, {"type": "boolean", "name": "Warehouse_block_D", "required": true}, {"type":
+  "boolean", "name": "Warehouse_block_F", "required": true}, {"type": "boolean", "name":
+  "Mode_of_Shipment_Flight", "required": true}, {"type": "boolean", "name": "Mode_of_Shipment_Road",
+  "required": true}, {"type": "boolean", "name": "Mode_of_Shipment_Ship", "required":
+  true}, {"type": "boolean", "name": "Product_importance_high", "required": true},
+  {"type": "boolean", "name": "Product_importance_low", "required": true}, {"type":
+  "boolean", "name": "Product_importance_medium", "required": true}, {"type": "boolean",
+  "name": "Gender_F", "required": true}, {"type": "boolean", "name": "Gender_M", "required":
+  true}]}'
+source: '{"tags": {"mlflow.user": "ASUS", "mlflow.source.name": "c:/Users/ASUS/Downloads/SMSML_AgustinusAlvinWicaksono/SMSML_AgustinusAlvinWicaksono/Membangun_model/modelling.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code
