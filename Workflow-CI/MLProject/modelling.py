@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 
-# Aktifkan autolog MLflow sekali di awal
+# Aktifkan autolog MLflow
 mlflow.autolog()
 
 # 1. Load data preprocessed
@@ -21,18 +21,16 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-# 4. Mulai tracking MLflow dengan nested=True
-mlflow.set_experiment("Basic_Model_Logistics")
+# ❌ Tidak perlu set_experiment atau start_run di sini
 
-with mlflow.start_run(nested=True):
-    # 5. Model sederhana
-    model = LogisticRegression(max_iter=500)
-    model.fit(X_train, y_train)
+# 4. Model sederhana
+model = LogisticRegression(max_iter=500)
+model.fit(X_train, y_train)
 
-    # 6. Evaluasi
-    y_pred = model.predict(X_test)
-    acc = accuracy_score(y_test, y_pred)
-    print("Akurasi:", acc)
-    print(classification_report(y_test, y_pred))
+# 5. Evaluasi
+y_pred = model.predict(X_test)
+acc = accuracy_score(y_test, y_pred)
+print("Akurasi:", acc)
+print(classification_report(y_test, y_pred))
 
-    # 7. Logging selesai otomatis karena autolog
+# ✅ MLflow akan log semua secara otomatis (param, metric, model, dll)
