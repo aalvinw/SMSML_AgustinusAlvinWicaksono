@@ -1,4 +1,4 @@
-name: prediksi_env
+name: smsml_env
 channels:
   - defaults
 dependencies:
